@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 
 import { usePrevious } from "services/hooks";
 
@@ -38,7 +38,7 @@ const AnimatedList = ({ ItemComponent, itemHeight, items }) => {
       <ul>
         <div
           className={
-            newMessagesHeight > 0 ? ".pimp-my-list-height-transition" : ""
+            newMessagesHeight > 0 ? "pimp-my-list-height-transition" : ""
           }
           style={{
             height: `${newMessagesHeight}px`,

@@ -1,1 +1,1 @@
-export { default as AnimatedList } from "./AnimatedList";
+export { default as AnimatedList } from "./AnimatedList/AnimatedList";
