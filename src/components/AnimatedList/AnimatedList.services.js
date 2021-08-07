@@ -1,7 +1,7 @@
-export const previousItemsIsEmptyAndThereAreNewItems = <T>(
-  previousItems: Array<T>,
-  newItems: Array<T>
-): boolean => {
+export const previousItemsIsEmptyAndThereAreNewItems = /*<T>*/ (
+  previousItems /*: Array<T>*/,
+  newItems /*: Array<T>*/
+) /*: boolean*/ => {
   if (previousItems.length === 0 && newItems.length > 0) {
     return true;
   }
@@ -9,10 +9,10 @@ export const previousItemsIsEmptyAndThereAreNewItems = <T>(
   return false;
 };
 
-export const hasNewItemsAtTheBeginning = <T>(
-  previousItems: Array<T>,
-  newItems: Array<T>
-): boolean => {
+export const hasNewItemsAtTheBeginning = /* <T> */ (
+  previousItems /* : Array<T> */,
+  newItems /* : Array<T> */
+) /* : boolean */ => {
   if (previousItemsIsEmptyAndThereAreNewItems(previousItems, newItems)) {
     return true;
   }
@@ -22,10 +22,10 @@ export const hasNewItemsAtTheBeginning = <T>(
   return firstItemIndex > 0;
 };
 
-export const getNewItemsAtTheBeginning = <T>(
-  previousItems: Array<T>,
-  newItems: Array<T>
-): Array<T> => {
+export const getNewItemsAtTheBeginning = /* <T> */ (
+  previousItems /* : Array<T> */,
+  newItems /* : Array<T> */
+) /* : Array<T> */ => {
   if (!hasNewItemsAtTheBeginning(previousItems, newItems)) {
     return [];
   }
@@ -35,10 +35,10 @@ export const getNewItemsAtTheBeginning = <T>(
   return newItems.slice(0, firstItemIndex);
 };
 
-export const hasNewItemsAtTheEnd = <T>(
-  previousItems: Array<T>,
-  newItems: Array<T>
-): boolean => {
+export const hasNewItemsAtTheEnd = /*<T>*/ (
+  previousItems /* : Array<T> */,
+  newItems /* : Array<T> */
+) /* : boolean */ => {
   if (previousItemsIsEmptyAndThereAreNewItems(previousItems, newItems)) {
     return true;
   }
@@ -50,10 +50,10 @@ export const hasNewItemsAtTheEnd = <T>(
   return lastItemIndex !== newItems.length - 1 && lastItemIndex > -1;
 };
 
-export const getNewItemsAtTheEnd = <T>(
-  previousItems: Array<T>,
-  newItems: Array<T>
-): Array<T> => {
+export const getNewItemsAtTheEnd = /* <T> */ (
+  previousItems /* : Array<T> */,
+  newItems /* : Array<T> */
+) /* : Array<T> */ => {
   if (!hasNewItemsAtTheEnd(previousItems, newItems)) {
     return [];
   }
