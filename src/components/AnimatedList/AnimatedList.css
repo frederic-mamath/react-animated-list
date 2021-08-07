@@ -1,0 +1,4 @@
+.pimp-my-list-height-transition {
+  height: 0;
+  transition: height 250ms ease-in;
+}
